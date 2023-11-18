@@ -37,18 +37,18 @@ int main() {
         return 1; // Keluar dengan kode error
     }
 
-    // Hitung gaji pertahun
-    int gajiPerTahun = gajiPerBulan * 12;
-
     // Hitung potongan asuransi
-    double potonganAsuransiTotal = gajiPerTahun * potonganAsuransi;
+    double potonganAsuransiTotal = gajiPerBulan * potonganAsuransi;
 
-    // Hitung gaji bersih pertahun
-    double gajiBersihPerTahun = gajiPerTahun - potonganAsuransiTotal;
+    // Hitung gaji bersih perbulan
+    int gajiBersihPerBulan = gajiPerBulan - potonganAsuransiTotal;
+
+    // Hitung gaji pertahun
+    int gajiPerTahun = gajiBersihPerBulan * 12;
 
     // Output hasil
     cout << "Nama pegawai: " << nama << endl;
-    cout << "Gaji perbulan: " << gajiPerBulan << endl;
+    cout << "Gaji perbulan: " << gajiBersihPerBulan << endl;
     cout << "Gaji pertahun: " << gajiPerTahun << endl;
 
     return 0; // Program berakhir tanpa error
